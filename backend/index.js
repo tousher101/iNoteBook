@@ -1,7 +1,11 @@
 require("dotenv").config();
-const cors = require('cors')
-const connectToMongo = require('./db')
-const passport=require('passport');require('./utils/passport')
+const cors = require('cors');
+const connectToMongo = require('./db');
+const passport=require('passport');require('./utils/passport');
+const helmet=require('helmet');
+const mongoSanitize=require('express-mongo-sanitize');
+const globalLimiter=require('./midle-wear/globalLimiter')
+const sanitizeInput=require('./midle-wear/xssMidlewear')
 //const cookieParser = require('cookie-parser')
 
 connectToMongo();
@@ -12,6 +16,10 @@ const app = express()
 
 const port=process.env.PORT || 5000;
 //app.use(cookieParser()) // cockie based token system
+app.use(sanitizeInput)
+app.use(globalLimiter)
+app.use(mongoSanitize())
+app.use(helmet())
 app.use(cors())
 app.use(passport.initialize())
 app.use (express.urlencoded({extended:true}))

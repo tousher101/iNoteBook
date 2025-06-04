@@ -10,6 +10,7 @@ const JWT_SECRET_PASSWORD_RESET = process.env.MY_PASSWORD_RESET_CODE;
 const verification = require('../midle-wear/verificatio')
 const sendEmail = require('../utils/sendEmail')
 const forgetEmail = require('../utils/pass-reset-send');
+const loginLimiter=require('../midle-wear/loginLimiter')
 
 
 
@@ -163,7 +164,7 @@ router.get('/verification/:token', async(req,res)=>{
 
 // Route-2: Loging User using API: POST "/api/auth/login:
 router.post('/login',[body('email','Enter Valid Email').isEmail(), //This one Express Validetor Apply Kora hoice
-      body('password', 'Password Cannot be Blank').exists()], async (req,res)=>{
+      body('password', 'Password Cannot be Blank').exists()],loginLimiter, async (req,res)=>{
             const errors = validationResult(req); // Ekahne Validator er result display kora hoice
      if (!errors.isEmpty()) {
       return res.status(400).json({ faild: 'Something Went Wrong. Check Your Information', errors: errors.array() });

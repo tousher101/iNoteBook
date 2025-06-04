@@ -1,12 +1,102 @@
-# React + Vite
+#iNoteBook App - Advanced Note Book App!
+Fully Customized Combined of notebook, newspaper, text-utils, advanced task manager crated by react.js, node.js(express), mongoDB, tailwind CSS!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features(Auth)
+- Signup
+- Signin
+- Email Verification
+- Forget Password
+- Reset Password
+- Signin With Google
+- Remember Password
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features(Notebook)
+- Add Board NoteBook
+- CURD-(Create, Update, Read, Delete).
+- Side Bar with profile info and photo.
+- Display notebook at another page.
+- Search your notebook with DB search.
+- Fully Backend Controll.
+- Dark Mood
+## Features (Newspaper)
+- Read Latest News.
+- News By category.
+- Page pagination Available (Previous/Next)
+- Infinity Scroll Available.
+- News source/author/time available.
+- API Call News.
+## Features (Text-Utils)
+- Manage your text.
+- Upparcase/Lowercase.
+- Word count/ space remove.
+- First word Capitalized.
+- All Word Capitalized.
+## Features (Advanced Task manager)
+- Add Task with deadline.
+- Start Task and this task will start countdown from starting date to deadline date.
+- Background Color Change by status (pending: yellow, start: blue, complete: green, overdue: red)
+- If the task overdeu its will give notification.
+- if the task complete then will give success notification.
+- CURD- option available.
+- Page pagination Available (Previous/Next)
+- Infinity Scroll Available.
+- Fully Backend Controll.
+- DataBased Saved.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🛠 Tech Stack
+## Front-End
+- React.js
+- Tailwind Css
+##Back-End
+- Node.js(Express)
+- MongoDB
+- Cloudinary
+- Multar
+- Mongoose
+- Resend
+- Google Auth Verification
+- Passport
+## Protection
+- express-rate-limit
+- Xss-Clean
+- Helmet
+- Mongo-Sanitize
+- Hpp
+- CSRF
+- Express-Slow-Down
+
+## Live Demo
+Not Available.
+
+## ScreenShot
+![iNoteBook App](./assets/1.JPG)
+![iNoteBook App](./assets/2.JPG)
+![iNoteBook App](./assets/3.JPG)
+![iNoteBook App](./assets/4.JPG)
+
+
+## Personal Note
+Git commit history is not available for this project because it was developed on a low-end system.
+Running Git or Git Extensions in VS Code significantly slowed down the editor, often causing it to hang.
+As a result, version control was managed manually outside of VS Code for this project.
+
+
+## 🚀 Run Locally
+
+Clone the project:
+
+```bash
+git clone https://github.com/tousher101/Task-Management.git
+cd Task-Management
+
+#Then, simply open index.html in your browser.
+
+
+
+
+
+
+

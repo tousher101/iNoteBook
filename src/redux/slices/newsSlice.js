@@ -1,11 +1,17 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-const base=import.meta.env.VITE_NEWS_API
+const API=import.meta.env.VITE_MAIN_URI_KEY
 export const fetchNews = createAsyncThunk('news/fetchNews',async({category, page},thunkAPI)=>{
     try{
-  
-const res= await fetch( `${base}/v2/top-headlines?country=us&category=${category}&apiKey=94d3e23148cb4143bb6fdb1fddbce25a&page=${page}&pageSize=19`)
+ const token = localStorage.getItem('auth-token')|| sessionStorage.getItem('auth-token')
+const res= await fetch( `${API}/api/news/getnews?category=${category}&page=${page}`,{
+  method: 'GET',
+  headers:{
+    'Content-Type':'application/json',
+      'auth-token':token
+  }
+})
   const data= await res.json();
-  
+
   return {articles:data.articles,
     totalResult: data.totalResults
   }

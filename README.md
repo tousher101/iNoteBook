@@ -89,10 +89,11 @@ As a result, version control was managed manually outside of VS Code for this pr
 Clone the project:
 
 ```bash
-git clone https://github.com/tousher101/Task-Management.git
-cd Task-Management
+git clone https://github.com/tousher101/iNoteBook.git
+cd iNotebook
+npm install
+npm run dev
 
-#Then, simply open index.html in your browser.
 
 
 

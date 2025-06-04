@@ -72,10 +72,10 @@ Fully Customized Combined of notebook, newspaper, text-utils, advanced task mana
 Not Available.
 
 ## ScreenShot
-![iNoteBook App](.src/assets/1.JPG)
-![iNoteBook App](.src/assets/2.JPG)
-![iNoteBook App](.src/assets/3.JPG)
-![iNoteBook App](.src/assets/4.JPG)
+![iNoteBook App](./src/assets/1.JPG)
+![iNoteBook App](./src/assets/2.JPG)
+![iNoteBook App](./src/assets/3.JPG)
+![iNoteBook App](./src/assets/4.JPG)
 
 
 ## Personal Note

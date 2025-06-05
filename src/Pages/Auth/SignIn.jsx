@@ -108,7 +108,7 @@ const handleSubmit= async(e)=>{
          </div>
         
           <button  type='submit' className='border-1 mt-[10px] rounded-2xl cursor-pointer hover:scale-110 duration-1000 shadow-lg py-[5px] font-semibold'>Sing In</button>
-          <button className=' border mt-[20px] rounded-2xl cursor-pointer hover:scale-110 duration-1000 shadow-lg' ><a href='http://localhost:5000/api/socialauth/google/callback' className=' flex justify-center items-center'> <img className='h-[40px] w-[40px]' src={google}/> Sign In With Google</a></button>
+          <button className=' border mt-[20px] rounded-2xl cursor-pointer hover:scale-110 duration-1000 shadow-lg' ><a href={`${BaseUrl}/api/socialauth/google/callback`} className=' flex justify-center items-center'> <img className='h-[40px] w-[40px]' src={google}/> Sign In With Google</a></button>
         </div>
         <div className='flex'>
         <div className='flex mr-[30px] justify-center'><p>Remember Me</p> <input checked={rememberMe} onChange={(e)=>{serRememberMe(e.target.checked)}} className='ml-[5px] w-4' type='checkbox'/></div>

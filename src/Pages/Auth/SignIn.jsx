@@ -77,16 +77,16 @@ const handleSubmit= async(e)=>{
   return (
     <>
      {mesg&&<Alert message={mesg} type={type} onClose={()=>{setMesg('')}}/>}
-    <div className='min-h-screen bg-cover bg-center flex-col relative 'style={{backgroundImage:`url(${Cover3})`}}>
+    <div className='h-screen bg-cover bg-center flex-col relative 'style={{backgroundImage:`url(${Cover3})`}}>
         <div className=' max-w-[1380px] mx-auto h-[70px] bg-transparent flex flex-[30%] justify-between items-center  '>
-            <div className='mt-[30px]'><p className='text-4xl ml-[10px] font-semibold text-[#c5aa6a] '>Hello,</p> 
-            <p className='text-5xl ml-[15px] font-[Poppins] text-gray-950 font-bold'>iNoteBook</p></div>
+            <div className='mt-[30px]'><p className='lg:text-4xl md:text-3xl text-2xl ml-[10px] font-semibold text-[#c5aa6a] '>Hello,</p> 
+            <p className='lg:text-5xl md:text-4xl text-3xl ml-[15px] font-[Poppins] text-gray-950 font-bold'>iNoteBook</p></div>
             
-            <button className='text-2xl border-2 p-[12px] mr-[20px] rounded-2xl font-[Poppins] hover:scale-110 
+            <button className='lg:text-2xl md:text-xl text-[15px] border-2 lg:p-[12px] p-[8px] mr-[20px] rounded-2xl font-[Poppins] hover:scale-110 
             duration-1000 inset-shadow-lg mt-[30px] font-semibold'> <Link to='/signup'>Create Account</Link>  </button>
            </div>
 
-       <div className='border h-[400px] w-[400px] flex flex-[70%] shadow-xl rounded-2xl   absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  mt-[30px]'>
+       <div className=' h-[400px] lg:w-[400px] md:w-[350px] w-[340px] flex flex-[70%] shadow-xl rounded-2xl   absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  mt-[30px]'>
 
         <form onSubmit={handleSubmit} className=' backdrop-blur-lg  flex flex-col justify-around items-center content-center rounded-2xl w-[400px] relative'>
           <div> <h1 className='mb-[10px] text-3xl font-semibold font-[Poppins]'>Sign In</h1></div>
@@ -94,13 +94,13 @@ const handleSubmit= async(e)=>{
           
           <div className='flex'>
             <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type='email' placeholder='E-mail' required className='border-1 p-[5px] mt-[10px] w-[300px] shadow-lg'/>
-            <img className='h-[20px] w-[20px] absolute top-25 right-15' src={emaily}/>
+            <img className='h-[20px] w-[20px] absolute top-25 lg:right-15 right-8' src={emaily}/>
           </div>
           
           <div className='flex'>  
             <input value={password} onChange={(e)=>{setPassword(e.target.value)}}  type={showPass}  placeholder='Password' required className='border p-[5px] mt-[10px] w-[300px] shadow-lg'/>  
           <input onChange={toggledPassword}  type='checkbox' id='toggle' className='h-[20px] w-[20px] absolute top-36 right-15  hidden'/> 
-          <div className='absolute top-36 right-15  h-[20px] w-[20px] '>
+          <div className='absolute top-36 lg:right-15 right-8  h-[20px] w-[20px] '>
             <label htmlFor='toggle'>
               <img className='cursor-pointer' src={eye}/>
             </label>

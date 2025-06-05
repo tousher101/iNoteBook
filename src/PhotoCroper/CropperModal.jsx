@@ -39,7 +39,7 @@ export default function CropperModal(props) {
 
         {!imageSrc ? (
           <div className="text-center">
-            <button onClick={props.cancel} className='fixed top-0 translate-y-[-50] mt-[30px] border border-white h-[60px] w-[60px]
+            <button onClick={props.cancel} className='fixed lg:top-0 lg:translate-y-[-50] md:top-0 md:left-[30px] top-0 left-[30px]  mt-[30px] border border-white h-[60px] w-[60px]
             rounded-4xl text-2xl text-center hover:opacity-50 hover:bg-[#374151] cursor-pointer text-white'>X</button>
             <input
               type="file"

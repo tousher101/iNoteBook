@@ -181,28 +181,28 @@ const handleEdit=async(_id)=>{
     <>
    {msg&&<Alert message={msg} type={type} onClose={()=>{setMsg('')}}/>}
      {completeAlert&&<Alert message={completeAlert} type={completeType} onClose={()=>{setCompleteAlert('')}}/>}
-    <div className='max-w-[1380px] mx-auto grid grid-cols-1'>
+    <div className='max-w-[1380px] mx-auto'>
       
-     <div className='flex flex-col justify-center bg-[#1E293B] text-white pb-[20px] rounded-b-3xl shadow-lg'>
+     <div className='flex flex-col justify-center bg-[#1E293B] text-white pb-[20px] rounded-b-3xl shadow-lg w-full'>
       <div>
-      <h1 className='text-center text-4xl font-semibold font-[Poppins] mt-[30px]'>Add Your Task</h1>
+      <h1 className='text-center lg:text-4xl text-3xl font-semibold font-[Poppins] mt-[30px]'>Add Your Task</h1>
       </div>
       <form onSubmit={handleSubmitTask}>
-      <div className='flex justify-around mt-[20px] text-xl items-center'>
+      <div className='lg:flex lg:justify-around md:grid md:grid-cols-1 md:gap-5  grid grid-cols-1 gap-5 justify-items-center  mt-[20px] text-xl '>
         <p>Title: <input value={title} onChange={(e)=>{setTitle(e.target.value)}} className='ml-[10px] w-[200px] px-[10px]' type='text' placeholder='Add Titile'/></p>
       <p>Description: <input value={description} onChange={(e)=>{setDescription(e.target.value)}} className='ml-[10px] w-[200px] px-[10px]' type='text' placeholder='Add Description'/></p>
       <p>Deadline:<input min={new Date().toISOString().split('T')[0]} value={deadline} onChange={(e)=>{setDeadline(e.target.value)}} className='ml-[10px]' type='date'/></p>
-      <button type='submit' className='border py-[10px] w-[150px] rounded-2xl bg-[#E9E4F0] text-black font-semibold cursor-pointer
-      hover:scale-90 duration-1000'>Add Task+</button>
+      <div><button type='submit' className='border py-[10px] w-[150px] rounded-2xl bg-[#E9E4F0] text-black font-semibold cursor-pointer
+      hover:scale-90 duration-1000'>Add Task+</button></div>
       </div>
       </form>
      </div>
 
-     <div className='bg-[#1E293B] text-white font-[Poppins] mt-[50px] rounded-3xl h-full  '>
-      <div className='mt-[30px]'><h1 className='text-center text-4xl font-semibold'>Dash Board</h1></div>
-      <div className='grid grid-cols-2 gap-[30px] mt-[30px] ml-[70px]'>
+     <div className='bg-[#1E293B] text-white font-[Poppins] mt-[50px] rounded-3xl h-full w-full py-[10px]  '>
+      <div className='mt-[30px]'><h1 className='text-center lg:text-4xl text-3xl font-semibold'>Dash Board</h1></div>
+      <div className='lg:grid lg:grid-cols-2 lg:gap-[20px] md:grid md:grid-cols-1 grid grid-cols-1 md:gap-[20px] gap-[20px] mt-[30px]'>
         {tasks?.map((task)=> (
-          <div key={task._id} onClick={()=>{setTaskId(task._id); setSelectedTask(task) }} >
+          <div  key={task._id} onClick={()=>{setTaskId(task._id); setSelectedTask(task) }} >
              <TaskCard  title={task.title} description={task.description} status={task.updatedStage} 
              create={task.createAt} deadline={task.deadline} remaining={task.remainingTime} start={()=>{handleStart(task._id)}} complete={()=>{handleComplete(task._id)}}
               openDeleteModal={openDeleteTaskModal} openEditModal={openEditTaskModal}

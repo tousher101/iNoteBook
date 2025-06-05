@@ -28,20 +28,21 @@ function TextUtils() {
     navigator.clipboard.writeText(text)
     }
   return (
-    <div className='max-w-[1380px] mx-auto grid grid-cols-1 justify-center'>
+    <div className='max-w-[1380px]   mx-auto overflow-x-hidden'>
         
-        <h1 className='text-center mt-[10px] text-4xl font-semibold'>Text-Util / Convert Your Text</h1>
-        <div className={`border grid grid-cols-1 justify-center mt-[30px] mx-[20px] ${bgTextCol}`}> <textarea value={text} onChange={(e)=>{setText(e.target.value)}} className='p-[10px]'  placeholder='Write Your Text Here'/></div>
-       <div className='flex mt-[30px] mx-[20px]'>
-         <div className='items-center'>
+        <h1 className={`text-center mt-[10px] lg:text-4xl md:text-3xl text-2xl font-semibold ${bgTextCol}`}>Text-Util / Convert Your Text</h1>
+        <div className={`border grid grid-cols-1 mx-[10px] mt-[30px] m  ${bgTextCol}`}> <textarea value={text} onChange={(e)=>{setText(e.target.value)}} className='p-[10px]'  placeholder='Write Your Text Here'/></div>
+
+       <div className='lg:flex lg:justify-center md:grid md:grid-cols-2 grid grid-cols-1 justify-items-center mt-[30px] mx-[10px]'>
+         <div className='grid'>
             <button onClick={handleUpperCase} className='border p-[10px] w-[220px] text-xl bg-[#C3CFE2] rounded-2xl cursor-pointer hover:scale-95 duration-1000 ml-[15px] mt-[10px]'>Convert UpperCase</button>
             <button onClick={handleLowerCase} className='border p-[10px] w-[220px] text-xl bg-[#C3CFE2] rounded-2xl cursor-pointer hover:scale-95 duration-1000 ml-[15px] mt-[10px]'>Convert LowerCase</button>
         </div>
-        <div className=''> 
+        <div className='grid'> 
             <button onClick={handleCapitalized} className='border p-[10px] w-[220px] text-xl bg-[#C3CFE2] rounded-2xl cursor-pointer hover:scale-95 duration-1000 ml-[15px] mt-[10px]'>Convert Capitalized</button>
              <button onClick={handleTitleCase} className='border p-[10px] w-[220px] text-xl bg-[#C3CFE2] rounded-2xl cursor-pointer hover:scale-95 duration-1000 ml-[15px] mt-[10px]'>Convert Title Case</button>
         </div>
-        <div className=''>
+        <div className='grid'>
              <button onClick={handleRemoveText} className='border p-[10px] w-[220px] text-xl bg-[#C3CFE2] rounded-2xl cursor-pointer hover:scale-95 duration-1000 ml-[15px] mt-[10px]'>Remove Space</button>
              <button onClick={handleCopyText} className='border p-[10px] w-[220px] text-xl bg-[#C3CFE2] rounded-2xl cursor-pointer hover:scale-95 duration-1000 ml-[15px] mt-[10px]'>Copy Text</button>
              <div className='flex'>

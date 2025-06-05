@@ -27,9 +27,9 @@ if(loading) return  <p className='text-center text-2xl font-bold mt-[20px]'>Lodi
 if (error) return <p>ERORR:{error}</p>
  
   return ( 
-<div className='max-w-[1380px] mx-auto'>
-  <div className='grid grid-cols-3'>
-    {articles.map((ari,i)=>{
+<div className='max-w-[1380px] mx-auto mt-[15px]'>
+  <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+    {articles?.map((ari,i)=>{
       return <div key={i}>
         <NewsCard imgUrl={ari.urlToImage} title={ari.title} des={ari.description} newsURL={ari.url} newsDate={ari.publishedAt}
        source={ari.source.name} />

@@ -49,9 +49,9 @@ const token = localStorage.getItem('auth-token') || sessionStorage.getItem('auth
 
    <div className={`min-h-screen bg-cover bg-center flex-col relative `}>
     <form onSubmit={submitHandle}>
-      <div className='flex justify-around  mt-[10px] bg-[#C3CFE2] py-3 mx-[10px] rounded-2xl shadow-lg font-[Poppins] ' >
-                <input className='border  px-[10px] py-[10px] w-[400px] rounded-2xl'value={name} onChange={(e)=>{setName(e.target.value)}} placeholder='Title' type='text'/>
-        <input className='border px-[10px] py-[10px] w-[400px] rounded-2xl' value={subject} onChange={(e)=>{setSubject(e.target.value)}} placeholder='Subject' type='text'/>
+      <div className='lg:flex md:grid md:grid-cols-1 md:gap-3   grid grid-cols-1 gap-3 lg:justify-around   mt-[10px] bg-[#C3CFE2] py-3 lg:mx-[10px] rounded-2xl shadow-lg font-[Poppins] ' >
+     <div>  <input className='border  px-[10px] py-[10px] lg:w-[400px] md:w-[300px] w-[300px] md:ml-[50px] lg:ml-[0px] ml-[50px] rounded-2xl'value={name} onChange={(e)=>{setName(e.target.value)}} placeholder='Title' type='text'/> </div> 
+      <div> <input className='border px-[10px] py-[10px] lg:w-[400px] md:w-[300px] w-[300px] md:ml-[50px] lg:ml-[0px] ml-[50px] rounded-2xl' value={subject} onChange={(e)=>{setSubject(e.target.value)}} placeholder='Subject' type='text'/></div> 
       </div>
      
         <div className={` items-center grid grid-cols-1  mx-w-[1380px] mx-auto  mt-[40px] ${bgTextCol}`}>

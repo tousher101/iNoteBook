@@ -16,22 +16,21 @@ const colorSelect=()=>{
   return (
     <>
 
-    <div className={`shadow-md shadow-black w-[550px] ${colorSelect()} px-[20px]  py-[20px] rounded-2xl font-[Poppins]`}>
-       <div className=' mb-[5px] w-[380px]'><h1 className='text-2xl break-words overflow-auto text-black font-semibold'>Title: {title}</h1></div> 
-        <div className=' mb-[5px] w-[380px]'> <p className='text-xl break-words overflow-auto text-black'>Description: {description}</p></div>
-       <div className='flex items-center justify-between'>
+    <div className={`shadow-md shadow-black  ${colorSelect()} px-[20px]  py-[20px] rounded-2xl font-[Poppins] mx-[10px]`}>
+       <div className=' mb-[5px] '><h1 className='text-2xl break-words overflow-auto text-black font-semibold'>Title: {title}</h1></div> 
+        <div className=' mb-[5px] '> <p className='text-xl break-words overflow-auto text-black'>Description: {description}</p></div>
         <div> <p className=' mb-[5px] text-xl text-black'>Status: {capitalStatus}</p></div>
-        <div className='mr-[50px]'> 
-            <button onClick={openEditModal} className='opacity-50 hover:opacity-100 duration-500 h-[25px] w-[25px] mr-[15px] cursor-pointer hover:scale-110'> <img className='h-[25px] w-[25px]' src={pencil}/> </button>
-            <button onClick={openDeleteModal} className='opacity-50 hover:opacity-100 duration-500 h-[25px] w-[25px] mr-[15px] cursor-pointer hover:scale-110'> <img className='h-[25px] w-[25px]' src={trash}/> </button>
-        </div>
-       </div>
        <p className=' mb-[5px] text-xl text-black'>Create Date: {createDate}</p>
         <p className=' mb-[5px] text-xl text-black'>Deadline: {deadlineDate}</p>
         <p className=' mb-[5px] text-xl text-black'>Remaining Days: {remaining} </p>
-        <div className='mt-[15px]'>
+        <div className='mt-[15px] flex items-center'>
         <button onClick={start} className=' text-xl h-[40px] w-[120px] rounded-2xl font-semibold shadow-lg bg-[#C3CFE2] cursor-pointer hover:scale-105 duration-500 text-black'>Start</button>
         <button onClick={complete} className=' text-xl h-[40px] w-[150px] ml-[15px] rounded-2xl font-semibold shadow-lg bg-[#C3CFE2] cursor-pointer hover:scale-105 duration-500 text-black '>Completed</button>
+        <div className='ml-[15px]  flex'>
+        <button onClick={openEditModal} className='opacity-50 hover:opacity-100 duration-500 h-[25px] w-[25px] mr-[15px] cursor-pointer hover:scale-110'> <img className='h-[25px] w-[25px]' src={pencil}/> </button>
+        <button onClick={openDeleteModal} className='opacity-50 hover:opacity-100 duration-500 h-[25px] w-[25px] mr-[15px] cursor-pointer hover:scale-110'> <img className='h-[25px] w-[25px]' src={trash}/> </button>
+        </div>
+        
         </div>
       
     </div>

@@ -190,7 +190,7 @@ return(
   {msg&&<Alert message={msg} type={type} onClose={()=>{setmsg('')}}/>}
 <div className='max-w-[1380px] mx-auto'>
   <div className='flex items-center content-center ml-[15px] mt-[15px]'>
-    <div> <input value={searchText} onChange={(e)=>{setSearchText(e.target.value)}} className={`border-1 w-[300px] px-[10px] py-[5px] rounded-2xl ${bgTextCol} placeholder:${bgTextCol}`} type='text' placeholder='Search'/></div>
+    <div> <input value={searchText} onChange={(e)=>{setSearchText(e.target.value)}} className={`border lg:w-[300px] md:w-[220px] w-[220px] px-[10px] py-[5px] rounded-2xl ${bgTextCol} placeholder:${bgTextCol}`} type='text' placeholder='Search'/></div>
     <div className='ml-[20px]'><button onClick={searchClickHandle}  className=' font-semibold mb-[5px] border mt-[10px] px-[30px] bg-white
      py-[6px] rounded-2xl hover:bg-blue-700 hover:text-white hover:border-black duration-500 cursor-pointer'>Search</button></div>
         </div>

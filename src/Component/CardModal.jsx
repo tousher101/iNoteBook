@@ -7,10 +7,10 @@ function CardModal(props) {
           <p className='text-4xl '>Your Note</p>
       <form className='mt-[30px] flex flex-col items-center'>
         <div className='font-bold text-xl'>
-          Title: {props.name} ||
-          Subject: {props.subject}
+         <p>Title: {props.name}</p>
+          <p>Subject: {props.subject}</p>
         </div>
-        <div>
+        <div className='mt-[15px]'>
           Description: {props.des}
         </div>
 

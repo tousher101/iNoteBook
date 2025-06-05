@@ -12,7 +12,7 @@ router.get('/google',passport.authenticate('google',{scope:['profile','email']})
 router.get('/google/callback',passport.authenticate('google',{session:false}),(req,res)=>{
 const token = jwt.sign({id:req.user._id, JWT_SECRET, expiresIn:'1d'});
     
-res.redirect(`http://localhost:5173?token=${token}`)
+res.redirect(`https://inotebook24.netlify.app?token=${token}`)
 });
 
 

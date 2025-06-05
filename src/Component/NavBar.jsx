@@ -10,6 +10,7 @@ import CropperModal from '../PhotoCroper/CropperModal'
 import Alert from './Alert'
 import menuIcon from '../assets/bx-menu.svg'
 import closeManeIcone from '../assets/bx-x.svg'
+const Base = import.meta.env.VITE_MAIN_URI_KEY
 
 function Navbar() {
 
@@ -30,7 +31,7 @@ function Navbar() {
     formData.append('photo',blob);
     const token = localStorage.getItem('auth-token')||sessionStorage.getItem('auth-token')
     try{
-      const res= await fetch('http://localhost:5000/api/photos/uploadphoto',{
+      const res= await fetch(`${Base}/api/photos/uploadphoto`,{
         method:'POST',
         headers:{
           'auth-token':token,
@@ -91,7 +92,7 @@ function Navbar() {
    <div className='h-[60px] w-[60px] flex-[5%] flex justify-center'>
     <label htmlFor='togg'>
       <div className=''>
-     {userInfo?.photo?.url? ( <img className='h-[60px] w-[60px] rounded-3xl cursor-pointer' src={userInfo.photo.url}/>):''  }
+      <img className='h-[60px] w-[60px] rounded-3xl cursor-pointer' src={userInfo?.photo?.url||User}/>
       </div>
         
     </label>

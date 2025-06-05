@@ -82,7 +82,7 @@ router.get('/verification/:token', async(req,res)=>{
       </style>
       <script>
         setTimeout(() => {
-          window.location.href = "http://localhost:5173/signup"; // বা তোমার client এর path
+          window.location.href = "https://inotebook24.netlify.app/signup"; // বা তোমার client এর path
         }, 3000);
       </script>
     </head>
@@ -143,7 +143,7 @@ router.get('/verification/:token', async(req,res)=>{
       </style>
       <script>
         setTimeout(() => {
-          window.location.href = "http://localhost:5173/home"; // বা তোমার client এর path
+          window.location.href = "https://inotebook24.netlify.app/home"; // বা তোমার client এর path
         }, 3000);
       </script>
     </head>
@@ -298,7 +298,7 @@ try{
       </style>
       <script>
         setTimeout(() => {
-          window.location.href = "http://localhost:5173/signin"; // বা তোমার client এর path
+          window.location.href = "https://inotebook24.netlify.app/signin"; // বা তোমার client এর path
         }, 3000);
       </script>
     </head>

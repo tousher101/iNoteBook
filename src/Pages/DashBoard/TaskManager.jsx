@@ -189,7 +189,7 @@ const handleEdit=async(_id)=>{
       </div>
       <form onSubmit={handleSubmitTask}>
       <div className='lg:flex lg:justify-around md:grid md:grid-cols-1 md:gap-5  grid grid-cols-1 gap-5 justify-items-center  mt-[20px] text-xl '>
-        <p>Title: <input value={title} onChange={(e)=>{setTitle(e.target.value)}} className='ml-[10px] w-[200px] px-[10px]' type='text' placeholder='Add Titile'/></p>
+        <p>Title: <input value={title} onChange={(e)=>{setTitle(e.target.value)}} className='ml-[10px] w-[200px] px-[10px]' type='text' placeholder='Add Title'/></p>
       <p>Description: <input value={description} onChange={(e)=>{setDescription(e.target.value)}} className='ml-[10px] w-[200px] px-[10px]' type='text' placeholder='Add Description'/></p>
       <p>Deadline:<input min={new Date().toISOString().split('T')[0]} value={deadline} onChange={(e)=>{setDeadline(e.target.value)}} className='ml-[10px]' type='date'/></p>
       <div><button type='submit' className='border py-[10px] w-[150px] rounded-2xl bg-[#E9E4F0] text-black font-semibold cursor-pointer

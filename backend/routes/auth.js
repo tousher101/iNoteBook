@@ -10,7 +10,9 @@ const JWT_SECRET_PASSWORD_RESET = process.env.MY_PASSWORD_RESET_CODE;
 const verification = require('../midle-wear/verificatio')
 const sendEmail = require('../utils/sendEmail')
 const forgetEmail = require('../utils/pass-reset-send');
-const loginLimiter=require('../midle-wear/loginLimiter')
+const loginLimiter=require('../midle-wear/loginLimiter');
+const APIURI=process.env.BACKEND_URI_KEY
+
 
 
 
@@ -143,7 +145,7 @@ router.get('/verification/:token', async(req,res)=>{
       </style>
       <script>
         setTimeout(() => {
-          window.location.href = "https://inotebook24.netlify.app/home"; // বা তোমার client এর path
+          window.location.href = "https://inotebook24.netlify.app/signin"; // বা তোমার client এর path
         }, 3000);
       </script>
     </head>
@@ -174,6 +176,7 @@ router.post('/login',[body('email','Enter Valid Email').isEmail(), //This one Ex
         if(!user){
             return res.status(404).json({msg:'Please Try To Login With Correct Information'})
         }
+        if(!user.isVerified){return res.status(400).json({msg:'Please Complete Email Verification'})}
         const passwordCompared = await bcrypt.compare(password,user.password);
         if(!passwordCompared){
             return res.status(404).json({msg:'Please Try To Login With Correct Information'})
@@ -251,7 +254,7 @@ router.get('/reset-password/:token', async(req,res)=>{
         <body style="font-family:Arial;text-align:center;margin-top:50px">
         <div style="border:2px solid black; display: grid; grid-template-columns:400px; justify-content:center; ">
           <h2>Reset Your Password</h2>
-          <form action="/api/auth/reset-password/${token}" method="POST">
+          <form action="${APIURI}/api/auth/reset-password/${token}" method="POST">
             <input style="height:50px; width:300px; border:solid; padding-left:10px; border-radius:20px; padding-right:10px;" type="password" name="password" placeholder="Enter new password" required />
             <button style="height: 50px; width: 120px; margin-top:30px; border-radius:20px; font-size: 20px; border:none; background:green; color:White" type="submit">Submit</button>
           </form>

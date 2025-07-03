@@ -4,7 +4,7 @@ const User = require('../models/User');
 const verification = require('../midle-wear/verificatio');
 const upload = require('../midle-wear/multer');
 const cloudinary = require('../utils/cloudinary-config/config-cloudinary');
-const user = require('../models/User');
+
 
 //Single Photo upload/delete
 router.post('/uploadphoto',verification, upload.single('photo'), async(req,res)=>{

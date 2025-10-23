@@ -12,7 +12,7 @@ const  UserSchema = new Schema({
     },
     password:{
         type:String,
-        required: true
+        required: function() {return !this.googleId;}
     },
     date:{
         type:Date,

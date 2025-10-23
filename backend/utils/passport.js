@@ -3,7 +3,7 @@ const GoogleStrategy= require('passport-google-oauth20').Strategy;
 const User = require('../models/User');
 const clientID=process.env.GOOGLE_CLIENT_ID
 const clientSecret = process.env.GOOGLE_CLIENT_SECRETE 
-passport.use(new GoogleStrategy ({clientID,clientSecret, callbackURL: '/auth/google/callback', scope:['profile','email'],},
+passport.use(new GoogleStrategy ({clientID,clientSecret, callbackURL: 'api/socialauth/google/callback', scope:['profile','email'],},
 
     async(accessToken, refreshToken, profile, done)=>{
         try{
